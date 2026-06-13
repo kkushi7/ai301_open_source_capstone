@@ -1,9 +1,9 @@
-# Contribution [#]: [Issue Title]
+# Contribution [#1244]: Intro Document Should Acknowledge Implicit fromint
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** [Your Name]  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Contribution Number:** [1]  
+**Student:** Kushi Kumbagowdana 
+**Issue:** https://github.com/coalton-lang/coalton/issues/1244  
+**Status:** [Phase I]
 
 ---
 
@@ -11,25 +11,27 @@
 
 [1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
 
+I chose this issue as it deals with more regard to documentation which is another skill I want to build and work on, as it goes to show how important documentation is as well as coding in general. Documentation is the foundation to how we build our projects and work out our flow, so it is important that we make it as clear and structured as possible.  
+
 ---
 
 ## Understanding the Issue
 
 ### Problem Description
 
-[In your own words, what's broken or missing?]
+For this issue, in the file intro-to-coalton.md, there seems to be a missing explanation on how Coalton supports casting of integer literals using fromint for any type that implements the Num typeclass.
 
 ### Expected Behavior
 
-[What should happen?]
+The expected behavior is that the documentation should explain how integer literals are interpreted when the target type is any type that implements Num.
 
 ### Current Behavior
 
-[What actually happens?]
+The documentation currently explains numbers/literals but not how integer literals are automatically converted.
 
 ### Affected Components
 
-[Which parts of the codebase are involved?]
+The intro-to-coalton.md is affected.
 
 ---
 
