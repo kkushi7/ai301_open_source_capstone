@@ -1,9 +1,9 @@
-# Contribution [#1244]: Intro Document Should Acknowledge Implicit fromint
+# Contribution [#27940]: [React Doctor] no-uncontrolled-input
 
 **Contribution Number:** [1]  
 **Student:** Kushi Kumbagowdana 
-**Issue:** https://github.com/coalton-lang/coalton/issues/1244  
-**Status:** [Phase I]
+**Issue:** https://github.com/wso2/product-is/issues/27940
+**Status:** [Phase 2]
 
 ---
 
@@ -11,7 +11,7 @@
 
 [1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
 
-I chose this issue as it deals with more regard to documentation which is another skill I want to build and work on, as it goes to show how important documentation is as well as coding in general. Documentation is the foundation to how we build our projects and work out our flow, so it is important that we make it as clear and structured as possible.  
+I chose this issue as it deals with noticing minor details and understanding React concepts on a deeper level which is something I want to work on and strengthen in my skill set. I hope to learn why these functions are needed and how we can notice when they are in need of fixing. Keeping an eye on small details as such, are what helps us grow as a software engineer and turns products from good to great. 
 
 ---
 
@@ -19,19 +19,31 @@ I chose this issue as it deals with more regard to documentation which is anothe
 
 ### Problem Description
 
-For this issue, in the file intro-to-coalton.md, there seems to be a missing explanation on how Coalton supports casting of integer literals using fromint for any type that implements the Num typeclass.
+For this issue, there are multiple files that have input elemnets that React thinks are controlled, however they are not, and there is no way to update their value.
 
 ### Expected Behavior
 
-The expected behavior is that the documentation should explain how integer literals are interpreted when the target type is any type that implements Num.
+The expected behavior is that every input field should behave as either a controlled input or an uncontrolled input.
 
 ### Current Behavior
 
-The documentation currently explains numbers/literals but not how integer literals are automatically converted.
+The inputs look editable while they are actually being read-only, where nothing happens and warnings appear.
 
 ### Affected Components
 
-The intro-to-coalton.md is affected.
+There are 12 files affectd:
+admin.branding.v1/components/preview/sign-in-box/fragments/email-otp-fragment.tsx:64
+admin.branding.v1/components/preview/sign-in-box/fragments/push-auth-fragment.tsx:60
+admin.branding.v1/components/preview/sign-in-box/fragments/password-reset-fragment.tsx:57
+admin.branding.v1/components/preview/sign-in-box/fragments/password-reset-fragment.tsx:205
+admin.branding.v1/components/preview/sign-in-box/fragments/totp-fragment.tsx:117
+admin.branding.v1/components/preview/sign-in-box/fragments/sms-otp-fragment.tsx:113
+admin.branding.v1/components/preview/sign-in-box/fragments/sign-up-fragment.tsx:61
+admin.branding.v1/components/preview/sign-in-box/fragments/sign-up-fragment.tsx:98
+admin.branding.v1/components/preview/sign-in-box/fragments/sign-up-fragment.tsx:125
+admin.logs.v1/pages/diagnostic-logs-page.tsx:373
+admin.logs.v1/pages/audit-logs-page.tsx:373
+admin.policy-administration.v1/components/policy-administration-page-layout.tsx:326
 
 ---
 
