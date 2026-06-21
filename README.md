@@ -9,8 +9,6 @@
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
-
 I chose this issue as it deals with noticing minor details and understanding React concepts on a deeper level which is something I want to work on and strengthen in my skill set. I hope to learn why these functions are needed and how we can notice when they are in need of fixing. Keeping an eye on small details as such, are what helps us grow as a software engineer and turns products from good to great. 
 
 ---
@@ -52,16 +50,20 @@ admin.policy-administration.v1/components/policy-administration-page-layout.tsx:
 ### Environment Setup
 
 [Notes on setting up your local development environment - challenges you faced, how you solved them]
+- I was a bit confused on whether I should work with the tags or through a branch, but was able to solve this by communictaing with maintainer and came to conclusion of working on latest branch.
 
 ### Steps to Reproduce
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+1. Fork the repository
+2. Clone onto local machine
+3. Set your working directory by setting up appropriate branch using checkout command
+4. Build the product with Maven using their setup https://wso2.github.io/using-maven.html
+5. Update files as needed
+6. Upstream repository with your local branch
 
 ### Reproduction Evidence
 
-- **Commit showing reproduction:** [Link to commit in your fork]
+- **Commit showing reproduction:** https://github.com/kkushi7/identity-apps/tree/feature/email-opt-fragment
 - **Screenshots/logs:** [If applicable]
 - **My findings:** [What you discovered during reproduction]
 
@@ -72,23 +74,25 @@ admin.policy-administration.v1/components/policy-administration-page-layout.tsx:
 ### Analysis
 
 [Your analysis of the root cause - what's causing the issue?]
+This issue is caused by a React lint rule as React think the input elements are controlled when they do not have a way to update their values.
 
 ### Proposed Solution
 
 [High-level description of your fix approach]
+My proposed approach is to go to each file, and thankfully each line where the issue occurs is stated, and understand based on its missing attributes. 
 
 ### Implementation Plan
 
 Using UMPIRE framework (adapted):
 
-**Understand:** [Restate the problem]
+**Understand:** The React input elements are perceived as controlled, when in fact they are not as there is no way to update their values and become classified as read-only. 
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
+**Match:** [What similar patterns/solutions exist in the codebase?] Within the codebase there is the pattern of onChange and useStates which shows how we should deal with the uncontrolled inputs as they are missing these attributes. 
 
 **Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+1. Modify each file listed with error at line stated
+2. Add proper functions as needed to make inputs controlled
+3. Run tests to check working functions
 
 **Implement:** [Link to your branch/commits as you work]
 
@@ -167,6 +171,6 @@ Using UMPIRE framework (adapted):
 
 ## Resources Used
 
-- [Link to helpful documentation]
-- [Tutorial or Stack Overflow post that helped]
+- https://wso2.github.io/
+- https://github.com/wso2/product-is/blob/master/docs/CONTRIBUTING.md
 - [GitHub issues or discussions that helped]
