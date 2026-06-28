@@ -3,7 +3,7 @@
 **Contribution Number:** [1]  
 **Student:** Kushi Kumbagowdana 
 **Issue:** https://github.com/wso2/product-is/issues/27940
-**Status:** [Phase 2]
+**Status:** [Phase 3]
 
 ---
 
@@ -51,21 +51,22 @@ admin.policy-administration.v1/components/policy-administration-page-layout.tsx:
 
 [Notes on setting up your local development environment - challenges you faced, how you solved them]
 - I was a bit confused on whether I should work with the tags or through a branch, but was able to solve this by communictaing with maintainer and came to conclusion of working on latest branch.
+- I got confused with which set up to do as there were many resoirces, but realized I only needed to do frontend set up which was eaiser to follow through their guide. 
 
 ### Steps to Reproduce
 
 1. Fork the repository
 2. Clone onto local machine
-3. Set your working directory by setting up appropriate branch using checkout command
-4. Build the product with Maven using their setup https://wso2.github.io/using-maven.html
-5. Update files as needed
+3. Download necessary frameworks and languages; Node.ja, Maven, pnpm, openJDK 21-23
+4. Set your working directory by setting up appropriate branch using checkout command
+5. Build the product with Maven using their setup https://wso2.github.io/using-maven.html
 6. Upstream repository with your local branch
 
 ### Reproduction Evidence
 
 - **Commit showing reproduction:** https://github.com/kkushi7/identity-apps/tree/feature/email-opt-fragment
 - **Screenshots/logs:** [If applicable]
-- **My findings:** [What you discovered during reproduction]
+- **My findings:** Since this is a frontend issue, I did not need to set up backend which I got confused over and had to redo my set up.
 
 ---
 
@@ -91,14 +92,14 @@ Using UMPIRE framework (adapted):
 
 **Plan:** [Step-by-step implementation plan]
 1. Modify each file listed with error at line stated
-2. Add proper functions as needed to make inputs controlled
-3. Run tests to check working functions
+2. Add proper functions as needed to make inputs controlled (ex: readOnly, useState(""), onChange)
+3. Run linter to check working functions, since this is an linter issue
 
 **Implement:** [Link to your branch/commits as you work]
 
 **Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
 
-**Evaluate:** [How will you verify it works?]
+**Evaluate:** I will verify my work by running the targeted linter function as we are given the exact file and line where the issue occurs, so I am able to see right away whether I fixed the issue or not within those files. 
 
 ---
 
@@ -117,15 +118,16 @@ Using UMPIRE framework (adapted):
 
 ### Manual Testing
 
-[What you tested manually and results]
+I plan on doing the tests manually using the linter function as this issue caused through the React lint so was able to do it for each file given using the target lint function: pnpm lint:targeted -- path/to/file.tsx
 
 ---
 
 ## Implementation Notes
 
-### Week [X] Progress
+### Week [5] Progress
 
 [What you built this week, challenges faced, decisions made]
+- I had to redo set up as I relaized I did the wrong one, which was for backend when my issue is frontend. Was able to figure it out thanks to the guide they provided.
 
 ### Week [Y] Progress
 
@@ -173,4 +175,5 @@ Using UMPIRE framework (adapted):
 
 - https://wso2.github.io/
 - https://github.com/wso2/product-is/blob/master/docs/CONTRIBUTING.md
+- https://github.com/wso2/identity-apps/blob/b2a8f16f154cf4ada332b7d624ba4b0ad7629518/docs/DEVELOPER.md#setting-up-development-tools
 - [GitHub issues or discussions that helped]
